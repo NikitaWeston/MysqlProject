@@ -34,3 +34,14 @@ JOIN
     Customers
 ON
     Orders.CustomerID = Customers.CustomerID;
+SELECT
+    BooksRead.Rating,
+    BooksRead.BooksReadID,
+    Users.Firstname,
+    Users.UserID
+FROM
+  BooksRead
+Join
+ Users
+ON
+    
