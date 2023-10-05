@@ -37,8 +37,10 @@ BookID INT NOT NULL
 
 CREATE TABLE BooksRead (
 BooksReadID INT PRIMARY KEY AUTO_INCREMENT,
-UserID INT NOT NULL,	
-BookID INT NOT NULL,
+ UserID INT NOT NULL ,	
+  FOREIGN KEY (UserID) references Users(userID),
+ BookID INT NOT NULL,
+ FOREIGN KEY (BookID) references Books(BookID),  
 DateRead DATE,
 ReviewDate DATE,
 ReviewText VARCHAR(255) NOT NULL,
